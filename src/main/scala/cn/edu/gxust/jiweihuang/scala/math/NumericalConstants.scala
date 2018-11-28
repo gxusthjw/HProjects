@@ -25,7 +25,11 @@ package cn.edu.gxust.jiweihuang.scala.math
   */
 object NumericalConstants extends Serializable {
   /**
+    * Serialized version number
+    */
+  val serialVersionUID = 1L
+  /**
     * The numerical precision for numerical calculation.
     */
-  val NUMERICAL_PRECISION = 1.0E-15
+  val NUMERICAL_PRECISION = 1.0e-15
 }

@@ -24,10 +24,12 @@ package cn.edu.gxust.jiweihuang.scala.math
   * @see java.io.Serializable
   */
 object NumericalConstants extends Serializable {
+
   /**
     * Serialized version number
     */
   val serialVersionUID = 1L
+
   /**
     * The numerical precision for numerical calculation.
     */

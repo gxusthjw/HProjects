@@ -13,19 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cn.edu.gxust.jiweihuang.scala.math
+package cn.edu.gxust.jiweihuang.scala.math.function
 
 /**
-  * <p>The object {@code NumericalConstants} is used for
-  * representing numerical constants.</p>
+  * <p>The trait {@code TUnivariateDerivativeFunction} is used for
+  * representing analytical univariate derivative function.</p>
   *
   * @author JiweiHuang
   * @version 1.0.0_build-20181130
-  * @see Serializable
+  * @see TUnivariateFunction
   */
-object NumericalConstants extends Serializable {
+trait TUnivariateDerivativeFunction extends TUnivariateFunction {
+
   /**
-    * The numerical precision for numerical calculation.
+    * <p>The method {@code derivative(x: Double)} is used to
+    * get the derivative  value of univariate derivative function.</p>
+    *
+    * @param x independent variable.
+    * @return the derivative value.
     */
-  val NUMERICAL_PRECISION = 1.0e-15
+  def derivative(x: Double): Double
+
+  /**
+    * <p>The string form of analysis formula of
+    * univariate derivative function.</p>
+    */
+  val dformula: String
 }

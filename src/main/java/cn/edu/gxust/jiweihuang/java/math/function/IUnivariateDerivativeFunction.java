@@ -13,27 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cn.edu.gxust.jiweihuang.java.math;
-
-import java.io.Serializable;
+package cn.edu.gxust.jiweihuang.java.math.function;
 
 /**
- * <p>The class {@code NumericalConstants} is used for
- * representing numerical constants.</p>
+ * <p>The interface {@code IUnivariateDerivativeFunction} is used for
+ * representing analytical univariate derivative function.</p>
  *
  * @author JiweiHuang
- * @version 1.0.0_build-20181128
- * @see java.io.Serializable
+ * @version 1.0.0_build-20181130
+ * @see IUnivariateFunction
  */
-public final class NumericalConstants implements Serializable {
+public interface IUnivariateDerivativeFunction extends IUnivariateFunction {
     /**
-     * Serialized version number
+     * <p>The method {@code derivative(double x)} is used to
+     * get the derivative  value of univariate derivative function.</p>
+     *
+     * @param x independent variable.
+     * @return the derivative value.
      */
-    private static final long serialVersionUID = -3814349650465331677L;
+    double derivative(double x);
 
     /**
-     * The numerical precision for numerical calculation.
+     * <p>The string form of analysis formula of
+     * univariate derivative function.</p>
      */
-    public static final double NUMERICAL_PRECISION = 1.0e-15;
-
+    String dformula();
 }

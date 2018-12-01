@@ -42,7 +42,7 @@ trait TUnivariateIntegralFunction extends TUnivariateFunction {
     * @param x1 upper limit of integral
     * @return the integral value.
     */
-  def integrate(x0: Double, x1: Double): Double = integrate(x1) - integrate(x0)
+  def integrate(x0: Double = lowerX, x1: Double = upperX): Double = integrate(x1) - integrate(x0)
 
   /**
     * The integral constant of univariate integral function.

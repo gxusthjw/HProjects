@@ -28,4 +28,5 @@ object NumericalConstants extends Serializable {
     * The numerical precision for numerical calculation.
     */
   val NUMERICAL_PRECISION = 1.0e-15
+  val ITERATIVE_LEGENDRE_GAUSS = 20
 }

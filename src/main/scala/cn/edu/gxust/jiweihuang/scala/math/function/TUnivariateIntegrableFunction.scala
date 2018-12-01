@@ -15,6 +15,7 @@
  */
 package cn.edu.gxust.jiweihuang.scala.math.function
 
+import cn.edu.gxust.jiweihuang.scala.math.NumericalConstants
 import org.hipparchus.analysis.integration._
 
 /**
@@ -79,7 +80,7 @@ trait TUnivariateIntegrableFunction extends TUnivariateFunction {
     * @return the definite integral value.
     */
   def integrateIterativeLegendreGauss(x0: Double = lowerX, x1: Double = upperX): Double =
-    (new IterativeLegendreGaussIntegrator(Int.MaxValue,
+    (new IterativeLegendreGaussIntegrator(NumericalConstants.ITERATIVE_LEGENDRE_GAUSS,
       BaseAbstractUnivariateIntegrator.DEFAULT_RELATIVE_ACCURACY,
       BaseAbstractUnivariateIntegrator.DEFAULT_ABSOLUTE_ACCURACY)).integrate(Int.MaxValue, this, x0, x1)
 }
